@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>springboot_maven_thymeleaf</groupId>
     <artifactId>springboot_maven_thymeleaf</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -13,37 +12,26 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.6.RELEASE</version>
     </parent>
+    <!--配置maven项目的远程仓库-->
     <repositories>
         <repository>
             <id>spring-releases</id>
             <url>https://repo.spring.io/libs-release</url>
         </repository>
     </repositories>
+    <!--配置maven项目插件的远程仓库-->
     <pluginRepositories>
         <pluginRepository>
             <id>spring-releases</id>
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
+    <!--自定义属性即可在任意地方使用，形式如${x}-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <java.version>1.8</java.version>
     </properties>
     <!--从Spring Boot添加依赖版本管理dependencyManagement-->
-   <!-- <dependencyManagement>
-        <dependencies>
-            <dependency>
-                &lt;!&ndash; Import dependency management from Spring Boot &ndash;&gt;
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>1.3.5.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>-->
-    <!--添加spring-web项目依赖-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,7 +56,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j</artifactId>
@@ -86,7 +73,7 @@
     </dependencies>
 
 
-    <!--添加build-plugin-->
+    <!--添加build-plugin 编译程序-->
     <build>
         <plugins>
             <!-- 修改代码后自动生效，Reload Java classes without restarting the container -->
