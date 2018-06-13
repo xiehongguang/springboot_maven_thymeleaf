@@ -9,3 +9,8 @@ springboot_thymeleaf  demo  会陆续加入新的功能
 ## 访问方式：
  1. 页面  http://localhost:8080/views/hello.html
  2. Json  http://localhost:8080/json
+
+## v1.1
+ 1. mybatis
+ 2. erro pages
+ 3. mvc 
