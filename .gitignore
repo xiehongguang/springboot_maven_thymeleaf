@@ -1,0 +1,21 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+/src/main/java/com/example/base/
+.gitignore
+.idea/httpRequests/
+src/test/
+target/classes/application.properties
+target/classes/com/example/base/
+target/classes/com/example/mapper/
+target/classes/com/example/model/
+target/classes/com/example/service/
+target/classes/mapping/
+target/classes/static/
+target/generated-sources/
