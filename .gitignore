@@ -5,6 +5,7 @@
 # IntelliJ project files
 .idea
 *.iml
+
 out
 gen
 /src/main/java/com/example/base/
@@ -19,3 +20,9 @@ target/classes/com/example/service/
 target/classes/mapping/
 target/classes/static/
 target/generated-sources/
+/src/main/java/com/example/base/dao/Dao.java
+/src/main/java/com/example/base/dao/IDao.java
+/src/main/java/com/example/base/page/Page.java
+/src/main/java/com/example/base/ConfigurationService.java
+/src/main/java/com/example/base/IConfigurationService.java
+/src/main/java/com/example/base/util/Page.java
