@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13c5af82-ac4b-4750-a2a4-b97f277a8ea1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ThirdAuthService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/WeChatAuthService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/impl/ThirdAuthServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/impl/WeChatAuthServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/springboot_maven_thymeleaf.iml" afterPath="$PROJECT_DIR$/springboot_maven_thymeleaf.iml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/controller/HelloController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/impl/WeChatAuthServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/impl/WeChatAuthServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="WeChatAuthServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WeChatAuthServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/service/impl/WeChatAuthServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="54" column="50" lean-forward="true" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+            <state relative-caret-position="345">
+              <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#refreshToken#0;class#WeChatAuthServiceImpl#0" expanded="false" />
@@ -72,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeChatController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WeChatController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="233">
+              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -107,8 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logstash-logback-encoder</find>
-      <find>core</find>
       <find>mybatis</find>
       <find>sql</find>
       <find>boot</find>
@@ -136,7 +127,9 @@
       <find>getAuthorizationUrl</find>
       <find>ServiceExce</find>
       <find>call</find>
+      <find>grant_type</find>
       <find>https://api.weixin.qq.com/sns/oauth2/a</find>
+      <find>accessToken</find>
     </findStrings>
     <replaceStrings>
       <replace>Exception</replace>
@@ -192,8 +185,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/service/WeChatAuthService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/service/ThirdAuthService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/service/impl/ThirdAuthServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/service/impl/WeChatAuthServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java" />
       </list>
     </option>
   </component>
@@ -1007,12 +1000,12 @@
       <workItem from="1528887027748" duration="2456000" />
       <workItem from="1529221630202" duration="931000" />
       <workItem from="1529244516954" duration="1735000" />
-      <workItem from="1529307993264" duration="7146000" />
+      <workItem from="1529307993264" duration="9863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48683000" />
+    <option name="totallyTimeSpent" value="51400000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1045,12 +1038,13 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37970352" sideWeight="0.70922744" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37970352" sideWeight="0.70922744" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36716077" sideWeight="0.4914163" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26126608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1059,7 +1053,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21420519" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1114,19 +1107,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java</url>
-          <line>32</line>
+          <line>31</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java</url>
-          <line>31</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/service/impl/WeChatAuthServiceImpl.java</url>
-          <line>87</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
@@ -1399,7 +1392,7 @@
         <state relative-caret-position="230">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1440,24 +1433,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/service/impl/WeChatAuthServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="345">
+          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="51" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="method#refreshToken#0;class#WeChatAuthServiceImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/service/impl/WeChatAuthServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controller/WeChatController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="54" column="50" lean-forward="true" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+        <state relative-caret-position="233">
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="27" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#refreshToken#0;class#WeChatAuthServiceImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>

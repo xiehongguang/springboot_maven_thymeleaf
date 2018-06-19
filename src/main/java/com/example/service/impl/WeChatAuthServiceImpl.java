@@ -45,12 +45,11 @@ public class WeChatAuthServiceImpl extends ThirdAuthServiceImpl implements WeCha
 
         String resp = getRestTemplate().getForObject(uri, String.class);
         logger.error("getAccessToken resp = " + resp);
+        JSONObject jsonObject = JSONObject.parseObject(resp);
         if (resp.contains("openid")) {
-            JSONObject jsonObject = JSONObject.parseObject(resp);
+
             String access_token = jsonObject.getString("access_token");
             String openId = jsonObject.getString("openid");
-            ;
-
             JSONObject res = new JSONObject();
             res.put("access_token", access_token);
             res.put("openId", openId);
@@ -59,9 +58,14 @@ public class WeChatAuthServiceImpl extends ThirdAuthServiceImpl implements WeCha
             return res.toJSONString();
         } else {
             System.out.println("获取token失败，msg = " + resp);
-            throw new ServiceException("获取token失败，msg = "+resp);
+            //throw new ServiceException("获取token失败，msg = "+resp);
+            JSONObject res = new JSONObject();
+            res.put("errcode", jsonObject.getString("errcode"));
+            res.put("errmsg", jsonObject.getString("errmsg"));
+            //res.put("refresh_token", jsonObject.getString("refresh_token"));
+            return res.toJSONString();
         }
-        return null;
+        //return null;
     }
 
     @Override
@@ -99,9 +103,15 @@ public class WeChatAuthServiceImpl extends ThirdAuthServiceImpl implements WeCha
         String resp = getRestTemplate().getForObject(uri, String.class);
         logger.error("getUserInfo resp = " + resp);
         if (resp.contains("errcode")) {
-            throw new ServiceException("获取用户信息错误，msg = "+resp);
+           // throw new ServiceException("获取用户信息错误，msg = "+resp);
             System.out.println("获取用户信息错误，msg = " + resp);
-            return null;
+            JSONObject jsonObject = JSONObject.parseObject(resp);
+            JSONObject res = new JSONObject();
+            res.put("errcode", jsonObject.getString("errcode"));
+            res.put("errmsg", jsonObject.getString("errmsg"));
+            //res.put("refresh_token", jsonObject.getString("refresh_token"));
+            return res;
+            //return null;
         } else {
             JSONObject data = JSONObject.parseObject(resp);
 
