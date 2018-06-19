@@ -87,6 +87,11 @@ public class WeChatAuthServiceImpl extends ThirdAuthServiceImpl implements WeCha
         return access_token;
     }
 
+    /**
+     *  WeChat 登陆的页面
+     * @return
+     * @throws UnsupportedEncodingException
+     */
     @Override
     public String getAuthorizationUrl() throws UnsupportedEncodingException {
         callbackUrl = URLEncoder.encode(callbackUrl, "utf-8");
