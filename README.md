@@ -14,3 +14,7 @@ springboot_thymeleaf  demo  会陆续加入新的功能
  1. mybatis
  2. erro pages
  3. mvc 
+ 
+ ## v1.2
+ 1. 第三方登陆
+ 2. 微信登陆
