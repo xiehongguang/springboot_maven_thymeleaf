@@ -14,7 +14,7 @@ import org.springframework.http.HttpStatus;
 /**
  * 程序入口
  */
-@SpringBootApplication
+@SpringBootApplication  //表示启用Spring Boot的自动配置特性
 @MapperScan("com.example.mapper")
 @ComponentScan("com.example.*")
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})

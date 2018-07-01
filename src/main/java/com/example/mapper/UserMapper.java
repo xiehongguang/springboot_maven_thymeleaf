@@ -1,9 +1,10 @@
 package com.example.mapper;
 
 import com.example.model.User;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
-
+@Mapper //Spring Boot在初始化mybatis时会自动加载该mapper类。
 public interface UserMapper {
     int deleteByPrimaryKey(Integer userId);
 
