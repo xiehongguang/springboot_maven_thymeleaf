@@ -10,4 +10,5 @@ public interface ThirdAuthService {
     public abstract String refreshToken(String code);
     public abstract String getAuthorizationUrl() throws UnsupportedEncodingException;
     public abstract JSONObject getUserInfo(String accessToken, String openId);
+    public abstract String URLException(String data);
 }

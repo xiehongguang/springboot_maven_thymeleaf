@@ -12,6 +12,9 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * http://wiki.connect.qq.com/%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C_oauth2-0
+ */
 @Service
 public class QQAuthServiceImpl extends ThirdAuthServiceImpl implements QQAuthService {
 
@@ -29,7 +32,7 @@ public class QQAuthServiceImpl extends ThirdAuthServiceImpl implements QQAuthSer
     private static final String USER_INFO_URL = "https://graph.qq.com/user/get_user_info?access_token=%s&oauth_consumer_key=%s&openid=%s";
 
     // 下面的属性可以通过配置读取
-    private  static final String CALLBACK_URL = "http://XXX/XX/XX"; // QQ 在登陆成功后回调的 URL，这个 URL 必须在 QQ 互联里填写过
+    private  static final String CALLBACK_URL = "www.xxx.cn/auth/WeChatAuth/callback"; // QQ 在登陆成功后回调的 URL，这个 URL 必须在 QQ 互联里填写过
     private  static final String API_KEY  = "xxxxxx";                                      // QQ 互联应用管理中心的 APP ID
     private  static final String API_SECRET = "xxxxxx";               // QQ 互联应用管理中心的 APP Key
     private  static final String SCOPE       = "get_user_info";                                  // QQ 互联的 API 接口，访问用户资料
@@ -56,10 +59,27 @@ public class QQAuthServiceImpl extends ThirdAuthServiceImpl implements QQAuthSer
             String access_token = map.get("access_token");
             return access_token;
         }else{
-            throw new ServiceException(resp);
+            //throw new ServiceException(resp);
+            return URLException(resp);
         }
     }
-    //由于QQ的几个接口返回类型不一样，此处是获取key-value类型的参数
+
+    /**
+     * url 访问异常处理
+     * @param data
+     * @return
+     */
+    public String URLException(String data){
+        Map<String,String> map = getParam(data);
+        String access_token = map.get("code");
+        String msg = map.get("msg");
+        logger.error(msg);
+        return access_token+":"+msg;
+    }
+
+    /**
+     * 由于QQ的几个接口返回类型不一样，此处是获取key-value类型的参数
+     */
     private Map<String,String> getParam(String string){
         Map<String,String> map = new HashMap();
         String[] kvArray = string.split("&");
@@ -91,7 +111,8 @@ public class QQAuthServiceImpl extends ThirdAuthServiceImpl implements QQAuthSer
             String openid = jsonObject.getString("openid");
             return openid;
         }else{
-            throw new ServiceException(resp);
+            //throw new ServiceException(resp);
+            return URLException(resp);
         }
     }
 

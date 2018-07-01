@@ -30,7 +30,7 @@ public class WeChatAuthServiceImpl extends ThirdAuthServiceImpl implements WeCha
             "https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%s&lang=zh_CN";
     // 回调域名
     private String callbackUrl =
-            "https://www.xxx.cn/auth/WeChatAuth/callback"; //回调域名
+            "https://www.xxx.cn/auth/QQAuth/callback"; //回调域名
 
     private static final String APP_ID = "xxxxxx";
     private static final String APP_SECRET = "xxxxxx";
@@ -57,13 +57,7 @@ public class WeChatAuthServiceImpl extends ThirdAuthServiceImpl implements WeCha
 
             return res.toJSONString();
         } else {
-            System.out.println("获取token失败，msg = " + resp);
-            //throw new ServiceException("获取token失败，msg = "+resp);
-            JSONObject res = new JSONObject();
-            res.put("errcode", jsonObject.getString("errcode"));
-            res.put("errmsg", jsonObject.getString("errmsg"));
-            //res.put("refresh_token", jsonObject.getString("refresh_token"));
-            return res.toJSONString();
+            return URLException(resp);
         }
         //return null;
     }
@@ -108,25 +102,33 @@ public class WeChatAuthServiceImpl extends ThirdAuthServiceImpl implements WeCha
         String resp = getRestTemplate().getForObject(uri, String.class);
         logger.error("getUserInfo resp = " + resp);
         if (resp.contains("errcode")) {
-           // throw new ServiceException("获取用户信息错误，msg = "+resp);
-            System.out.println("获取用户信息错误，msg = " + resp);
-            JSONObject jsonObject = JSONObject.parseObject(resp);
-            JSONObject res = new JSONObject();
-            res.put("errcode", jsonObject.getString("errcode"));
-            res.put("errmsg", jsonObject.getString("errmsg"));
-            //res.put("refresh_token", jsonObject.getString("refresh_token"));
-            return res;
+            return  JSONObject.parseObject(URLException(resp));
             //return null;
         } else {
             JSONObject data = JSONObject.parseObject(resp);
-
             JSONObject result = new JSONObject();
             result.put("id", data.getString("unionid"));
             result.put("nickName", data.getString("nickname"));
             result.put("avatar", data.getString("headimgurl"));
-
             return result;
         }
 
+    }
+
+    /**
+     * URL 请求失败
+     * @param resp
+     * @return
+     */
+    @Override
+    public String URLException(String resp) {
+        System.out.println("获取token失败，msg = " + resp);
+        //throw new ServiceException("获取token失败，msg = "+resp);
+        JSONObject jsonObject = JSONObject.parseObject(resp);
+        JSONObject res = new JSONObject();
+        res.put("errcode", jsonObject.getString("errcode"));
+        res.put("errmsg", jsonObject.getString("errmsg"));
+        //res.put("refresh_token", jsonObject.getString("refresh_token"));;
+        return res.toJSONString();
     }
 }
